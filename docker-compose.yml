@@ -1,0 +1,17 @@
+version: '3'
+services:
+  rx-compiler:
+    user: "${USERID}:${GROUPID}"
+    build:
+      context: rx-compiler
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix 
+      - ~:/workspace
+      - ./.emacs.d:/home/emacs/.emacs.d:rw
+    ports:
+      - "3000:3000"
+    network_mode: "host"
+    tty: true
+    command: bash
