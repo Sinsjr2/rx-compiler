@@ -189,3 +189,10 @@ RUN curl -o /usr/local/share/fonts/Inconsolata-Regular.ttf -SL "https://github.c
 
 ENV HOME /home/emacs
 WORKDIR /home/emacs
+
+ENV LANG ja_JP.UTF-8
+ENV LANGUAGE ja_JP:ja
+ENV LC_ALL ja_JP.UTF-8
+
+ENV XMODIFIERS @im=none
+ENV GTK_IM_MODULE none 

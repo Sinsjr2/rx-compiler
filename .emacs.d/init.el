@@ -68,6 +68,8 @@
 ;; 日本語入力の設定
 (when (eq system-type 'gnu/linux)
   (require 'mozc)
+  (require 'mozc-popup)
+  (setq mozc-candidate-style 'popup) 
   ;; mozcがキーバンドを奪うため再設定
   (bind-keys :map mozc-mode-map
 			 ("C-x h" . mark-whole-buffer)
